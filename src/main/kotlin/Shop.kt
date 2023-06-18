@@ -157,16 +157,22 @@ var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
             }
         }
 
+fun kaufen() {
+    var basket = mutableListOf<Produkt>()
+    Warenkorb()
+    basket.add(Produkt(produktName = "test", produktPreis = 220))
+}
+
         fun logInBereich() {
             var meineKaufe: MutableList<Produkt> = mutableListOf()
             println(
                 """
-                0 -> Meine Daten                                    ${kundeDef.name} Eingeloggt:  'q'->Logout
-                1 -> Mein Warenkorb
-                2 -> Meine Käufe
-                3 -> Meine Verträge
-                4 -> Angebote
-                5 -> Sortiment & Tariefe
+                    0 -> Meine Daten                                    ${kundeDef.name} Eingeloggt:  'q'->Logout
+                                            1 -> Mein Warenkorb
+                                            2 -> Meine Käufe
+                                            3 -> Meine Verträge
+                                            4 -> Angebote
+                                            5 -> Sortiment & Tariefe
             """.trimIndent()
             )
             var eingabe = readln()
@@ -176,23 +182,28 @@ var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
             }
             if (eingabe == "1") {
                 //Funktionsaufruf
-                Warenkorb()
+                println( Warenkorb().toString())
+                println(Warenkorb().warenKorbAnzeigen())
 
                 logInBereich()
             } else if (eingabe == "2") {
                 meineKaufe = mutableListOf()
+                meineKaufe.addAll(Produkt().produktListe)
+                kaufen()
 
                 logInBereich()
             } else if (eingabe == "3") {
                 println("Hallo ${kundeDef.name}")
+                Thread.sleep(1500)
                 println("Ihre Verträge können Sie hier einsehen:")
+                Thread.sleep(1000)
                 println("[1]-> Handyvertrag LTE Max \nStatus: Aktiv                    [ Rechnung einsehen ]\n")
                 println("[2]-> Handyversicherung  \nStatus: Aktiv                      [ Rechnung einsehen ]\n")
                 println("[3]-> Smart-M Tariv \nStatus: Inaktiv (gekündigt)             [ Rechnung einsehen ]\n")
                 logInBereich()
             } else if (eingabe == "4") {
-                test()
-                logInBereich()
+                angeboteAufruf()
+                //logInBereich()
             } else if (eingabe == "q") {
                 println("Möchten Sie sich wirklich ausloggen? Zum bestätigen -Enter- | für Abbruch -n-")
                 var bestaetigung = readln()
@@ -204,6 +215,9 @@ var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
                 }
             }
         }
+
+
+
 
         fun logOut() {
             println("Sie wurden ausgeloggt.")
@@ -261,11 +275,11 @@ var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
 
             println(
                 """ Hauptmenü:
-                1 -> Login
-                2 -> Neuen Kundenaccount anlegen
-                3 -> Kategorien
-                4 -> Angebote
-                5 -> Produkt gleich Wählen
+                                    1 -> Login
+                                    2 -> Neuen Kundenaccount anlegen
+                                    3 -> Kategorien
+                                    4 -> Angebote
+                                    5 -> Produkt gleich Wählen
             """.trimIndent()
             )
             var eingabe = readln()
@@ -302,7 +316,6 @@ var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
                 "Xiaomi Poco X4        Angebot! aktuell statt      289       für nur:    260 €!"
                 |   Speicher:   erweiterbar       |   RAM:   |   
                 |   254 GB          ja            |   16 GB  |
-                        
                   
                     )
             """.trimIndent())
