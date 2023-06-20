@@ -4,33 +4,34 @@ import java.util.*
 open class Warenkorb {
     private val artikel = mutableListOf<Produkt>()
 
-    fun artikelHinzufuegen(item: Produkt) {
-
+    fun artikelHinzufuegen(produkt: Produkt): Produkt? {
         var warenkorbListe: MutableList<Produkt> = mutableListOf()
-        fun produktauswahl(produkt: Produkt): Produkt? {
-            var nutzerProduktListe: MutableList<Produkt> = mutableListOf()
-            println("Bitte geben Sie die Nummer des gewünschten Produkts ein:")
-            for ((index, produkt) in nutzerProduktListe.withIndex()) {
-                println("$index - ${produkt.produktName}")
-            }
-
-            val eingabe = readln()
-            val index = eingabe.toIntOrNull()
-
-            if (index != null && index in 0 until nutzerProduktListe.size) {
-                return nutzerProduktListe[index]
-            }
-
-            return null
+        warenkorbListe.add(produkt)
+        var nutzerProduktListe: MutableList<Produkt> = mutableListOf()
+        println("Bitte geben Sie die Nummer des gewünschten Produkts ein:")
+        for ((index, produkt) in nutzerProduktListe.withIndex()) {
+            println("$index - ${produkt.produktName}")
         }
+
+        val eingabe = readln()
+        val index = eingabe.toIntOrNull()
+
+        if (index != null && index in 0 until nutzerProduktListe.size) {
+            return nutzerProduktListe[index]
+        }
+
+        return null
+
 
         var itemWahl = readln().toInt()
         for (items in artikel) {
-            artikel.add(item)
+            artikel.add(produkt)
             warenKorbAnzeigen()
 
         }
     }
+
+
 
     fun artikelLoeschen(item: Produkt) {
         artikel.remove(item)

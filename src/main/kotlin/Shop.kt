@@ -9,13 +9,15 @@ var angebote = mutableListOf(
     Smartphone("Galaxy Note 7       ", 500, 500),
     Smartwatch("appleWhatch 20 pro ", 1300, 256),
     Smartwatch("Samsung 20 pro     ", 1300, 256),
-    InternetVertraege("Giga Zuhause200    ", 25, 47834725, 200),
+    InternetVertraege("Giga Zuhause200    ", 25,  200),
     Smartphone("iPhone 12 pro      ", 1200, 256),
-    InternetVertraege("Internet DSL100     ", 25, 3483948, 100),
-    Versicherungen("Geräte - KOMPLETT-SCHUTZ     ", 10, 2, 29839)
+    InternetVertraege("Internet DSL100     ", 25,  100),
+    Versicherungen("Geräte - KOMPLETT-SCHUTZ     ", 10, 2)
 )
 var kundeDef: Kunde = Kunde("Emil", LocalDate.now(), "Fürstenstr.11 ","09130", "Chemnitz", "****")
 var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
+
+var warenkorb: Warenkorb = Warenkorb()
 
 
         /**
@@ -157,11 +159,6 @@ var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
             }
         }
 
-fun kaufen() {
-    var basket = mutableListOf<Produkt>()
-    Warenkorb()
-    basket.add(Produkt(produktName = "test", produktPreis = 220))
-}
 
         fun logInBereich() {
             var meineKaufe: MutableList<Produkt> = mutableListOf()
@@ -173,23 +170,32 @@ fun kaufen() {
                                             3 -> Meine Verträge
                                             4 -> Angebote
                                             5 -> Sortiment & Tariefe
+                                            K -> Shoppen
+                                            S -> Suche
             """.trimIndent()
             )
             var eingabe = readln()
-
+            if ((eingabe == "k")||(eingabe == "K")){
+                println("Wählen Sie Artikel durch Eingabe einer Zahl")
+                var auswahl = mutableListOf<Produkt>()
+                do {
+                    for (artikel in auswahl ){
+                        warenkorb.artikelHinzufuegen()
+                    }
+                }while (eingabe !== "q")
+            }
             if (eingabe == "0") {
                 println("$kundenListe ")
             }
             if (eingabe == "1") {
                 //Funktionsaufruf
-                println( Warenkorb().toString())
-                println(Warenkorb().warenKorbAnzeigen())
+                 warenkorb.warenKorbAnzeigen()
+
 
                 logInBereich()
             } else if (eingabe == "2") {
                 meineKaufe = mutableListOf()
-                meineKaufe.addAll(Produkt().produktListe)
-                kaufen()
+
 
                 logInBereich()
             } else if (eingabe == "3") {
@@ -204,7 +210,10 @@ fun kaufen() {
             } else if (eingabe == "4") {
                 angeboteAufruf()
                 //logInBereich()
-            } else if (eingabe == "q") {
+            }else if (eingabe == "5"){
+                produkteSortiert()
+
+            } else  {
                 println("Möchten Sie sich wirklich ausloggen? Zum bestätigen -Enter- | für Abbruch -n-")
                 var bestaetigung = readln()
                 if (bestaetigung == "") {
@@ -258,6 +267,7 @@ fun kaufen() {
 
                 println("[" + "$i" + "]->" + "   ${produkte.produktName}        statt      ${produkte.produktPreis}       für nur $sonderpreis €!")
             }
+            warenkorb.artikelHinzufuegen()
             logInBereich()
         }
 
@@ -292,11 +302,13 @@ fun kaufen() {
                 hauptmenu()
             } else if (eingabe == "3") {
                 produkteSortiert()
+                //var datenBankt
                 artikelAuswaehlen()
             } else if (eingabe == "4") {
                 angeboteAufruf()
                 artikelAuswaehlen()
             } else if (eingabe == "5") {
+                angeboteAufruf()
                 println("Geben Sie Ihre auswahl ein:")
                 artikelAuswaehlen()
             } else {
@@ -311,12 +323,18 @@ fun kaufen() {
 
             if (eingabe == "q") {
                 return null
-            } else if (eingabe == "1") {
+            } else if (eingabe == "1" ) {
+
+
+
             println("""
+                
+                
                 "Xiaomi Poco X4        Angebot! aktuell statt      289       für nur:    260 €!"
                 |   Speicher:   erweiterbar       |   RAM:   |   
                 |   254 GB          ja            |   16 GB  |
-                  
+                [K]-> zum Korb hinzufügen
+                 
                     )
             """.trimIndent())
                     hauptmenu()

@@ -1,9 +1,11 @@
 open class Vertrage(var vertragName: String,
                     var mntlAbschlag: Int,
-                    var vertragsNummer: Int): Produkt(vertragName, mntlAbschlag) {
+                    ): Produkt(vertragName, mntlAbschlag) {
+
+    var vertragsNummer: Int = 0
 
     override fun produkteAnzeige(){
-        println("$vertragName, Vertragsnummer: $vertragsNummer      Monatlich: $mntlAbschlag"   )
+        println("$vertragName   Monatlich: $mntlAbschlag"   )
     }
 
     var vertragsliste: MutableList<Vertrage> = mutableListOf()

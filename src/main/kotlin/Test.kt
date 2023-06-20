@@ -1,6 +1,10 @@
 fun test() {
 
 
+
+
+
+
     println("Loading...")
     println("__________________________________________________________________________________________________")
     print("|||||")
@@ -85,15 +89,21 @@ fun test() {
 
 
 
+        fun alleProdukteAnzeigen(list: MutableList<Produkt>){
+
+
+        }
+
+
         // Erstelle einen Warenkorb und füge Produkte hinzu
         val korb = Warenkorb()
 
         korb.artikelHinzufuegen(Smartphone("xxyz", 999, 512))
-        korb.artikelHinzufuegen(Vertrage("Schutz", 10, 22092220))
+        korb.artikelHinzufuegen(Vertrage("Schutz", 10))
 
 
         // Gib den Warenkorb aus
-        //korb.warenKorbAnzeigen()
+        korb.warenKorbAnzeigen()
 
         // Entferne ein Produkt und gib den aktualisierten Warenkorb aus
         //korb.artikelLoeschen(handyVersicherung)

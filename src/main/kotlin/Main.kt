@@ -18,6 +18,9 @@ fun main() {
         test()
     }
 
+    var warenkorb: Warenkorb = Warenkorb()
+    warenkorb.test
+
 
 
 
