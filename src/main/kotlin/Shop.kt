@@ -272,12 +272,16 @@ var warenkorb: Warenkorb = Warenkorb()
         }
 
 
-        fun hauptmenu() {
-
+/**
+ * Funktion zum Aufruf der Menu-Optionen
+ */
+fun hauptmenu() {
+            //Kurze-Zeit-Angebote Anzeige
             var addListe: MutableList<String> = mutableListOf(
-                "NEU!!! EXKLUSIVANGEBOT! iPhone23s für nur 1999.00€ nur heute",
+                "NEU!!! EXKLUSIVANGEBOT! iPhone14 für nur 1299.00€ nur heute",
                 "NEU!!! EXKLUSIVANGEBOT! LTE 140 GB für nur 19.99€ Mntl. nur heute\"",
             )
+            //Ausgabe 1 zuffälig gewähltes Angebot
             var add = addListe.random()
             println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
             println("$add")

@@ -2,6 +2,10 @@ import kotlin.system.exitProcess
 
 fun main() {
 
+    var alleProdukte: AlleProdukte = AlleProdukte()
+    alleProdukte.alleProdukteEinfuegen()
+
+
     fun checkMindestalter(alter: Short): Boolean {
         val mindestalter = 12
         return alter >= mindestalter
@@ -19,7 +23,7 @@ fun main() {
     }
 
     var warenkorb: Warenkorb = Warenkorb()
-    warenkorb.test
+
 
 
 

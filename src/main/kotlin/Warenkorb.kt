@@ -2,33 +2,35 @@ import java.util.*
 
 // Klasse für den Warenkorb
 open class Warenkorb {
-    private val artikel = mutableListOf<Produkt>()
+    val artikel = mutableListOf<Produkt>()
 
-    fun artikelHinzufuegen(produkt: Produkt): Produkt? {
+    fun artikelHinzufuegen(): Produkt? {
+        var produkt: Produkt = Produkt("Test", 0)
         var warenkorbListe: MutableList<Produkt> = mutableListOf()
         warenkorbListe.add(produkt)
-        var nutzerProduktListe: MutableList<Produkt> = mutableListOf()
+        var nutzerKorbListe: MutableList<Produkt> = mutableListOf()
         println("Bitte geben Sie die Nummer des gewünschten Produkts ein:")
-        for ((index, produkt) in nutzerProduktListe.withIndex()) {
+        for ((index, produkt) in nutzerKorbListe.withIndex()) {
             println("$index - ${produkt.produktName}")
         }
 
-        val eingabe = readln()
-        val index = eingabe.toIntOrNull()
+        var eingabe = readln()
+        var index = eingabe.toIntOrNull()
 
-        if (index != null && index in 0 until nutzerProduktListe.size) {
-            return nutzerProduktListe[index]
+        if (index != null && index in 0 until nutzerKorbListe.size) {
+            for (artikel in nutzerKorbListe){
+                warenkorb.artikelHinzufuegen()
+            }
+            return warenkorb.artikelHinzufuegen()
+
         }
-
-        return null
-
 
         var itemWahl = readln().toInt()
         for (items in artikel) {
             artikel.add(produkt)
             warenKorbAnzeigen()
-
         }
+    return warenkorb.artikelHinzufuegen()
     }
 
 

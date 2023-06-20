@@ -98,8 +98,8 @@ fun test() {
         // Erstelle einen Warenkorb und füge Produkte hinzu
         val korb = Warenkorb()
 
-        korb.artikelHinzufuegen(Smartphone("xxyz", 999, 512))
-        korb.artikelHinzufuegen(Vertrage("Schutz", 10))
+       // korb.artikelHinzufuegen(Smartphone("xxyz", 999, 512))
+    //  korb.artikelHinzufuegen(Vertrage("Schutz", 10))
 
 
         // Gib den Warenkorb aus

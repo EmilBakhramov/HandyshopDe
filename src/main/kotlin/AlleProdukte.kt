@@ -27,29 +27,34 @@ open class AlleProdukte{
         Smartwatch("Samsung 20 pro        ", 1300, 256,),
         Smartwatch( "GT3 Pro (43mm) Huawe ", 499,  300 ))
     var alleProdukte: MutableList<Produkt> = mutableListOf()
-    fun alleProdukte() {
+
+    fun alleProdukteEinfuegen() : MutableList<Produkt> {
 
         println("Aktuelle Angebote:")
         for (artikel in angebote) {
             alleProdukte.add(artikel)
-            println("${artikel.produktName}     für: ${artikel.produktPreis}" )
+            println("${artikel.produktName}     für: ${artikel.produktPreis}€" )
         }
+        println()
         println("Smartwatches: ")
         for (artikel in sWatchesList) {
             alleProdukte.add(artikel)
-            println("${artikel.modell}  ${artikel.speicher} GB für ${artikel.preis}" )
+            println("${artikel.modell}  ${artikel.speicher} GB für ${artikel.preis}€" )
         }
+        println()
         println("Smartphones:")
         for (artikel in alleSmartPhoneList){
             alleProdukte.add(artikel)
-            println("${artikel.produktName}  ${artikel.speicher} GB für ${artikel.produktPreis}" )
+            println("${artikel.produktName}  ${artikel.speicher} GB für ${artikel.produktPreis}€" )
         }
+        println()
         println("Internet:")
         for (produkte in alleVertraege){
             alleProdukte.add(produkte)
-            println("${produkte.vertragName}  für ${produkte.mntlAbschlag}" )
+            println("${produkte.vertragName}  für ${produkte.mntlAbschlag}€" )
         }
 
+        return alleProdukte
     }
 
 }
