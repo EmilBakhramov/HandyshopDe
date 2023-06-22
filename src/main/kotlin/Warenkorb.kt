@@ -2,13 +2,13 @@ import java.util.*
 
 // Klasse für den Warenkorb
 open class Warenkorb {
-    val artikel = mutableListOf<Produkt>()
+    var artikel = mutableListOf<Produkt>()
 
-    fun artikelHinzufuegen(): Produkt? {
-        var produkt: Produkt = Produkt("Test", 0)
-        var warenkorbListe: MutableList<Produkt> = mutableListOf()
-        warenkorbListe.add(produkt)
-        var nutzerKorbListe: MutableList<Produkt> = mutableListOf()
+    fun artikelHinzufuegen(produkt: Produkt) {
+      //  var produkt: Produkt = Produkt("Test", 0)
+
+        artikel.add(produkt)
+        /*var nutzerKorbListe: MutableList<Produkt> = mutableListOf()
         println("Bitte geben Sie die Nummer des gewünschten Produkts ein:")
         for ((index, produkt) in nutzerKorbListe.withIndex()) {
             println("$index - ${produkt.produktName}")
@@ -19,18 +19,15 @@ open class Warenkorb {
 
         if (index != null && index in 0 until nutzerKorbListe.size) {
             for (artikel in nutzerKorbListe){
-                warenkorb.artikelHinzufuegen()
+                //warenkorb.artikelHinzufuegen()
             }
             return warenkorb.artikelHinzufuegen()
 
         }
 
-        var itemWahl = readln().toInt()
-        for (items in artikel) {
-            artikel.add(produkt)
-            warenKorbAnzeigen()
-        }
-    return warenkorb.artikelHinzufuegen()
+        var itemWahl = readln().toInt()*/
+        //warenKorbAnzeigen()
+        //return warenkorb.artikelHinzufuegen()
     }
 
 
@@ -97,7 +94,8 @@ open class Warenkorb {
     }
 
     private fun erstelleRechnung(): String {
-        val rechnungsnummer = UUID.randomUUID().toString()
+        //val rechnungsnummer = UUID.randomUUID().toString()
+        val rechnungsnummer = (Math.random() * 1000000000).toInt()
         val gesamtsumme = zwischenSumme()
 
         val rechnungBuilder = StringBuilder()

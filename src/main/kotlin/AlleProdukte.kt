@@ -26,6 +26,7 @@ open class AlleProdukte{
         Smartwatch("appleWhatch 22 pro    ", 1300, 856,),
         Smartwatch("Samsung 20 pro        ", 1300, 256,),
         Smartwatch( "GT3 Pro (43mm) Huawe ", 499,  300 ))
+
     var alleProdukte: MutableList<Produkt> = mutableListOf()
 
     fun alleProdukteEinfuegen() : MutableList<Produkt> {

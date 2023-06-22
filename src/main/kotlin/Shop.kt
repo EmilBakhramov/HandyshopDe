@@ -20,6 +20,8 @@ var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
 var warenkorb: Warenkorb = Warenkorb()
 
 
+
+
         /**
          * Methode fuer Neues Konto hinzufügen
          */
@@ -65,6 +67,7 @@ var warenkorb: Warenkorb = Warenkorb()
                                 println("Konto existiert bereits! -> LogIn -> Eingabe '2'")
                             }
                             println("Kunde mit diesem Namen bereits vorhanden!")
+
                             break
                         }
                     }
@@ -123,7 +126,7 @@ var warenkorb: Warenkorb = Warenkorb()
         fun logIn() {
             try {
                 print("Benutzername: ")
-                var username = readLine()!!
+                var username = readln()
 
                 val console: Console? = System.console()
                 if (console != null) {
@@ -132,23 +135,27 @@ var warenkorb: Warenkorb = Warenkorb()
 
                     // Maskieren Sie das Passwort, indem Sie es durch Sternchen ersetzen
                     val maskedPassword = "*".repeat(passwordString.length)
+                    /*val reader = console.reader()
+                    while (true) {
+                        val currentCharacter = reader.read()
+                        if (currentCharacter.toChar() == '\n')
+                    }*/
 
                     println("Your password is: $maskedPassword")
                 } else {
-                    println("No console available")
+                    //println("No console available")
                 }
                 print("Passwort: ")
                 console?.let {
                 }
 
-                    var password = readLine()!!
+                    var password = readln()
 
                     for (kunden in kundenListe) {
                         if (kunden.name == username && kunden.passwort == password) {
                             println("Login erfolgreich.")
                             println("Willkommen ${kunden.name}")
                             logInBereich()
-
                         } else {
                             println("Benutzername oder Passwort falsch.")
                         }
@@ -178,26 +185,19 @@ var warenkorb: Warenkorb = Warenkorb()
             if ((eingabe == "k")||(eingabe == "K")){
                 println("Wählen Sie Artikel durch Eingabe einer Zahl")
                 var auswahl = mutableListOf<Produkt>()
-                do {
-                    for (artikel in auswahl ){
+
+                    /*for (artikel in auswahl ){
                         warenkorb.artikelHinzufuegen()
-                    }
-                }while (eingabe !== "q")
-            }
-            if (eingabe == "0") {
+                    }*/
+
+            } else if (eingabe == "0") {
                 println("$kundenListe ")
-            }
-            if (eingabe == "1") {
+            } else if (eingabe == "1") {
                 //Funktionsaufruf
                  warenkorb.warenKorbAnzeigen()
 
-
-                logInBereich()
             } else if (eingabe == "2") {
                 meineKaufe = mutableListOf()
-
-
-                logInBereich()
             } else if (eingabe == "3") {
                 println("Hallo ${kundeDef.name}")
                 Thread.sleep(1500)
@@ -206,10 +206,25 @@ var warenkorb: Warenkorb = Warenkorb()
                 println("[1]-> Handyvertrag LTE Max \nStatus: Aktiv                    [ Rechnung einsehen ]\n")
                 println("[2]-> Handyversicherung  \nStatus: Aktiv                      [ Rechnung einsehen ]\n")
                 println("[3]-> Smart-M Tariv \nStatus: Inaktiv (gekündigt)             [ Rechnung einsehen ]\n")
-                logInBereich()
+
             } else if (eingabe == "4") {
                 angeboteAufruf()
-                //logInBereich()
+                println("Wählen Sie ein Produkt:")
+                try {
+
+                    var produktEingabe = readln()
+                    var index = produktEingabe.toIntOrNull()
+
+                    if (index != null) {
+                        if ((index > 0) && (index <= angebote.size)) {
+                            warenkorb.artikelHinzufuegen(angebote[index.minus(1)])
+                        } else {
+                            println("Index nicht gefunden, bitte Zahl eingeben!")
+                        }
+                    }
+                }catch (ex: Exception){
+                    println(ex.printStackTrace())
+                }
             }else if (eingabe == "5"){
                 produkteSortiert()
 
@@ -219,10 +234,10 @@ var warenkorb: Warenkorb = Warenkorb()
                 if (bestaetigung == "") {
                     logOut()
                     hauptmenu()
-                }else if (bestaetigung == "n"){
-                    logInBereich()
+                    return
                 }
             }
+            logInBereich()
         }
 
 
@@ -267,59 +282,61 @@ var warenkorb: Warenkorb = Warenkorb()
 
                 println("[" + "$i" + "]->" + "   ${produkte.produktName}        statt      ${produkte.produktPreis}       für nur $sonderpreis €!")
             }
-            warenkorb.artikelHinzufuegen()
-            logInBereich()
+            //warenkorb.artikelHinzufuegen()
+            //logInBereich()
         }
 
 
-/**
- * Funktion zum Aufruf der Menu-Optionen
- */
-fun hauptmenu() {
-            //Kurze-Zeit-Angebote Anzeige
-            var addListe: MutableList<String> = mutableListOf(
-                "NEU!!! EXKLUSIVANGEBOT! iPhone14 für nur 1299.00€ nur heute",
-                "NEU!!! EXKLUSIVANGEBOT! LTE 140 GB für nur 19.99€ Mntl. nur heute\"",
-            )
-            //Ausgabe 1 zuffälig gewähltes Angebot
-            var add = addListe.random()
-            println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-            println("$add")
-            println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        /**
+         * Funktion zum Aufruf der Menu-Optionen
+         */
+        fun hauptmenu() {
+                    //Kurze-Zeit-Angebote Anzeige
+                    var addListe: MutableList<String> = mutableListOf(
+                        "NEU!!! EXKLUSIVANGEBOT! iPhone14 für nur 1299.00€ nur heute",
+                        "NEU!!! EXKLUSIVANGEBOT! LTE 140 GB für nur 19.99€ Mntl. nur heute\"",
+                    )
+                    //Ausgabe 1 zuffälig gewähltes Angebot
+                    var add = addListe.random()
+                    println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                    println("$add")
+                    println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
-            println(
-                """ Hauptmenü:
-                                    1 -> Login
-                                    2 -> Neuen Kundenaccount anlegen
-                                    3 -> Kategorien
-                                    4 -> Angebote
-                                    5 -> Produkt gleich Wählen
-            """.trimIndent()
-            )
-            var eingabe = readln()
-            if (eingabe == "1") {
-                //Funktionsaufruf
-                logIn()
-                hauptmenu()
-            } else if (eingabe == "2") {
-                neuenKundeErstellen()
-                hauptmenu()
-            } else if (eingabe == "3") {
-                produkteSortiert()
-                //var datenBankt
-                artikelAuswaehlen()
-            } else if (eingabe == "4") {
-                angeboteAufruf()
-                artikelAuswaehlen()
-            } else if (eingabe == "5") {
-                angeboteAufruf()
-                println("Geben Sie Ihre auswahl ein:")
-                artikelAuswaehlen()
-            } else {
-                angebote
-                hauptmenu()
-            }
-        }
+                    println(
+                        """ Hauptmenü:
+                                            1 -> Login
+                                            2 -> Neuen Kundenaccount anlegen
+                                            3 -> Kategorien
+                                            4 -> Angebote
+                                            5 -> Produkt gleich Wählen
+                    """.trimIndent()
+                    )
+                    var eingabe = readln()
+                    if (eingabe == "1") {
+                        //Funktionsaufruf
+                        logIn()
+                        hauptmenu()
+                    } else if (eingabe == "2") {
+                        neuenKundeErstellen()
+                        hauptmenu()
+                    } else if (eingabe == "3") {
+                        produkteSortiert()
+                        //var datenBankt
+                        artikelAuswaehlen()
+                    } else if (eingabe == "4") {
+                        angeboteAufruf()
+                        artikelAuswaehlen()
+                    } else if (eingabe == "5") {
+                        angeboteAufruf()
+                        println("Geben Sie Ihre auswahl ein:")
+                        artikelAuswaehlen()
+                    }else if (eingabe == "q"){
+                        return
+                    } else {
+                        angebote
+                        hauptmenu()
+                    }
+                }
 
         fun artikelAuswaehlen(): MutableList<Produkt>? {
             println("Bitte geben Sie die Nummer des Artikels ein, (oder 'q' zum Beenden):")

@@ -3,7 +3,7 @@ fun test() {
 
 
 
-
+/*
 
     println("Loading...")
     println("__________________________________________________________________________________________________")
@@ -82,14 +82,14 @@ fun test() {
     // Der Benutzer hat Zugang zu den Funktionen des Stores
     println("                       Herzlich Willkommen!")
     Thread.sleep(2000)
-        angeboteAufruf()
+      //  angeboteAufruf()*/
 
         hauptmenu()
 
 
 
 
-        fun alleProdukteAnzeigen(list: MutableList<Produkt>){
+        /*fun alleProdukteAnzeigen(list: MutableList<Produkt>){
 
 
         }
@@ -107,7 +107,7 @@ fun test() {
 
         // Entferne ein Produkt und gib den aktualisierten Warenkorb aus
         //korb.artikelLoeschen(handyVersicherung)
-        //korb.warenKorbAnzeigen()
+        //korb.warenKorbAnzeigen()*/
     }
 
     //var kunde1: Kunde = Kunde("Maxi Bauer", "12.08.1987", "Musterstr. 2", "08736", "Testort", "0000" )
