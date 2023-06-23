@@ -14,6 +14,12 @@ fun main() {
         exitProcess(-1)
 
     } else {
+        println()
+        Thread.sleep(1000)
+        println("Defalt-Benutzername:    admin")
+        println("Defalt-Passwort:        admin")
+        println()
+        Thread.sleep(1000)
         hauptmenu()
     }
 }

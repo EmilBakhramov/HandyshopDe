@@ -14,7 +14,7 @@ var angebote = mutableListOf(
     Versicherungen("Geräte - KOMPLETT-SCHUTZ     ", 10, 2)
 )
 //Kunde Initialisieren
-var kundeDef: Kunde = Kunde("Emil", LocalDate.of(1994,12,15), "Fürstenstr.11 ","09130", "Chemnitz", "017656968030", "bahramov.e@googlemail.com","****")
+var kundeDef: Kunde = Kunde("admin", LocalDate.of(1994,12,15), "Fürstenstr.11 ","09130", "Chemnitz", "017656968030", "bahramov.e@googlemail.com","admin")
 
 var kundenListe: MutableList<Kunde> = mutableListOf(kundeDef)
 
@@ -331,6 +331,7 @@ fun hauptmenu() {
             } else if (eingabe == "3") {
                 produkteSortiert()
                 artikelAuswaehlen(angebote)
+                hauptmenu()
             } else if (eingabe == "4") {
                 angeboteAufruf()
                 artikelAuswaehlen(angebote)

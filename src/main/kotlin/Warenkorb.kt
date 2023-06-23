@@ -30,22 +30,27 @@ open class Warenkorb {
         if (warenkorb.artikel.isEmpty()) {
             println("Ihr warenkorb ist leer")
         } else {
-            if (eigeloggt == false) {
-                println("Für Kaufvorgang einloggen oder registrieren!")
-            } else {
                 println("Warenkorb:")
                 for (item in artikel) {
                     println("${item.produktName} - ${item.produktPreis} €")
                 }
-
                 println("Gesamt: ${zwischenSumme()} € zur Bestellung -> j Löschen -> L")
-                var input = readln()
-
-                if (input == "j") {
-                    kaufAbschliessen()
-                }
-                if (input == "L") {
-                    println("Welches Produkt möchten Sie entfernen?")
+                if (eigeloggt == false) {
+                    println("Für Kaufvorgang einloggen oder registrieren!")
+                    println(" 1 -> LogIn    2 -> Registrierung")
+                    var input = readln()
+                    if (input == "1"){
+                        logIn()
+                    }else if (input == "2") {
+                        neuenKundeErstellen()
+                    }
+                }else{
+                    var input = readln()
+                    if (input == "j") {
+                        kaufAbschliessen()
+                    }
+                    if (input == "L") {
+                        println("Welches Produkt möchten Sie entfernen?")
                     try {
                         var produktLoeschen = readln()
                         var index = produktLoeschen.toIntOrNull()

@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8117e977-8043-4125-b46a-e7580ee07c49" name="Changes" comment="main">
+    <list default="true" id="8117e977-8043-4125-b46a-e7580ee07c49" name="Changes" comment="Verbesserte Version 23.06.23 22:55">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AlleProdukte.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AlleProdukte.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Bestellung.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Kunde.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Kunde.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Shop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Shop.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Test.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Warenkorb.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Warenkorb.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,13 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687508495975</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Verbesserte Version 23.06.23 22:55">
+      <created>1687553821787</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687553821787</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Handyshop" />
     <MESSAGE value="Warenkorb befüllen funktioniert wieder :)" />
     <MESSAGE value="main" />
-    <option name="LAST_COMMIT_MESSAGE" value="main" />
+    <MESSAGE value="Verbesserte Version 23.06.23 22:55" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verbesserte Version 23.06.23 22:55" />
   </component>
 </project>
