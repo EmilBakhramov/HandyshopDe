@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8117e977-8043-4125-b46a-e7580ee07c49" name="Changes" comment="Warenkorb befüllen funktioniert wieder :)">
+    <list default="true" id="8117e977-8043-4125-b46a-e7580ee07c49" name="Changes" comment="main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AlleProdukte.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AlleProdukte.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Bestellung.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Kunde.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Kunde.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Shop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Shop.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Warenkorb.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Warenkorb.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +29,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d9e1ced4-a2ce-4e40-a02b-6ca34971cef9" />
+        <option name="url" value="https://github.com/EmilBakhramov/HandyshopDe.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2RHToNBoF70QFOTzw4UiCaM9rxw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -35,7 +53,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "/Users/emilbakhramov/IdeaProjects/HandyshopDe/src/main/kotlin",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -90,27 +111,20 @@
       <option name="project" value="LOCAL" />
       <updated>1687469104895</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="main">
+      <created>1687508495975</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687508495975</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Handyshop" />
     <MESSAGE value="Warenkorb befüllen funktioniert wieder :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Warenkorb befüllen funktioniert wieder :)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Shop.kt</url>
-          <line>27</line>
-          <properties method="neuenKundeErstellen">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="main" />
+    <option name="LAST_COMMIT_MESSAGE" value="main" />
   </component>
 </project>

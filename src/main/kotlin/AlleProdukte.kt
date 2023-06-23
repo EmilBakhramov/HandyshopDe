@@ -17,9 +17,6 @@ open class AlleProdukte{
         Versicherungen("Geräte-KOMPLETT-SCHUTZ  ", 10, 2))
 
 
-
-
-
     var sWatchesList: MutableList<Smartwatch> = mutableListOf(
         Smartwatch("appleWhatch 20 pro    ", 1300, 256,),
         Smartwatch("Samsung 21 pro        ", 1300, 150,),
@@ -31,12 +28,7 @@ open class AlleProdukte{
 
     fun alleProdukteEinfuegen() : MutableList<Produkt> {
 
-        println("Aktuelle Angebote:")
-        for (artikel in angebote) {
-            alleProdukte.add(artikel)
-            println("${artikel.produktName}     für: ${artikel.produktPreis}€" )
-        }
-        println()
+
         println("Smartwatches: ")
         for (artikel in sWatchesList) {
             alleProdukte.add(artikel)
@@ -50,9 +42,9 @@ open class AlleProdukte{
         }
         println()
         println("Internet:")
-        for (produkte in alleVertraege){
-            alleProdukte.add(produkte)
-            println("${produkte.vertragName}  für ${produkte.mntlAbschlag}€" )
+        for (artikel in alleVertraege){
+            alleProdukte.add(artikel)
+            println("${artikel.vertragName}  für ${artikel.mntlAbschlag}€" )
         }
 
         return alleProdukte

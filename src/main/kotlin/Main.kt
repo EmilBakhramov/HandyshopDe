@@ -2,7 +2,6 @@ import kotlin.system.exitProcess
 
 fun main() {
 
-
     fun checkMindestalter(alter: Short): Boolean {
         val mindestalter = 12
         return alter >= mindestalter
@@ -15,15 +14,6 @@ fun main() {
         exitProcess(-1)
 
     } else {
-
         hauptmenu()
-
     }
-
-
-
-
-
-
-
 }
