@@ -16,10 +16,10 @@ fun main() {
 
     } else {
 
-        test()
+        hauptmenu()
+
     }
 
-    var warenkorb: Warenkorb = Warenkorb()
 
 
 

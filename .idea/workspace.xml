@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8117e977-8043-4125-b46a-e7580ee07c49" name="Changes" comment="Handyshop">
+    <list default="true" id="8117e977-8043-4125-b46a-e7580ee07c49" name="Changes" comment="Warenkorb befüllen funktioniert wieder :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AlleProdukte.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AlleProdukte.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Kunde.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Kunde.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Shop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Shop.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Test.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Warenkorb.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Warenkorb.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,12 +83,20 @@
       <option name="project" value="LOCAL" />
       <updated>1687268988153</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Warenkorb befüllen funktioniert wieder :)">
+      <created>1687469104895</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687469104895</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Handyshop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Handyshop" />
+    <MESSAGE value="Warenkorb befüllen funktioniert wieder :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Warenkorb befüllen funktioniert wieder :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

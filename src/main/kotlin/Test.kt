@@ -84,7 +84,6 @@ fun test() {
     Thread.sleep(2000)
       //  angeboteAufruf()*/
 
-        hauptmenu()
 
 
 
